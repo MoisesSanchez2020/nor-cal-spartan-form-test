@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nor-Cal Spartan Scaffold | Customer Request Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#" class="brand" aria-label="Nor-Cal Spartan Scaffold home">
+        <img src="/assets/norcal-spartan-logo-cropped.png" alt="Nor-Cal Spartan Scaffold logo" />
+      </a>
+
+      <button class="mobile-menu" type="button" aria-label="Open menu">☰</button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#services">Services <span>⌄</span></a>
+        <a href="#projects">Projects</a>
+        <a href="#safety">Safety</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="phone" href="tel:8557264387">☎ (855) 726-4387</a>
+        <a class="quote-btn" href="#request-form">Request a Quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Customer Request Form</h1>
+          <p>Request scaffold services, modifications, dismantle, or a project estimate.</p>
+          <span class="accent-line"></span>
+        </div>
+      </section>
+
+      <section class="form-section" id="request-form">
+        <form id="scaffoldForm" class="request-form" enctype="multipart/form-data">
+          <div class="form-grid">
+            <fieldset class="card card-1">
+              <legend><span class="form-icon customer-icon"></span><span class="number">1.</span> Customer Information</legend>
+              <div class="two-col">
+                <label>Company Name <b>*</b><input name="companyName" placeholder="Enter company name" required /></label>
+                <label>Contact Person <b>*</b><input name="contactPerson" placeholder="Enter full name" required /></label>
+                <label>Phone Number <b>*</b><input name="phone" type="tel" placeholder="(555) 123-4567" required /></label>
+                <label>Email Address <b>*</b><input name="email" type="email" placeholder="name@company.com" required /></label>
+                <label>Preferred Contact Method
+                  <select name="preferredContactMethod">
+                    <option value="">Select preferred method</option>
+                    <option>Phone</option>
+                    <option>Email</option>
+                    <option>Text Message</option>
+                  </select>
+                </label>
+                <label>Best Time to Contact
+                  <select name="bestTimeToContact">
+                    <option value="">Select time</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="card card-2">
+              <legend><span class="form-icon project-icon"></span><span class="number">2.</span> Project Information</legend>
+              <label>Project Name <b>*</b><input name="projectName" placeholder="Enter project name" required /></label>
+              <label>Project Address <b>*</b><input name="projectAddress" placeholder="Enter project address" required /></label>
+              <div class="three-col">
+                <label>City <b>*</b><input name="city" placeholder="Enter city" required /></label>
+                <label>State <b>*</b>
+                  <select name="state" required>
+                    <option value="">Select state</option>
+                    <option>CA</option><option>NV</option><option>OR</option><option>WA</option><option>AZ</option>
+                  </select>
+                </label>
+                <label>ZIP Code <b>*</b><input name="zipCode" placeholder="Enter ZIP code" required /></label>
+              </div>
+              <label class="with-info">Project Type <b>*</b>
+                <select name="projectType" required>
+                  <option value="">Select project type</option>
+                  <option>Residential</option>
+                  <option>Commercial</option>
+                  <option>Apartment / Multi-Family</option>
+                  <option>Industrial</option>
+                  <option>Government / Public Works</option>
+                  <option>Other</option>
+                </select>
+                <span class="info-dot">i</span>
+              </label>
+              <label>Description of Work<textarea name="descriptionOfWork" rows="2" placeholder="Briefly describe the project scope"></textarea></label>
+            </fieldset>
+
+            <fieldset class="card card-3">
+              <legend><span class="form-icon scaffold-icon"></span><span class="number">3.</span> Scaffold Request Details</legend>
+              <div class="two-col details-grid">
+                <label>Requested Service <b>*</b>
+                  <select name="requestedService" required>
+                    <option value="">Select service</option>
+                    <option>Scaffold Erection</option>
+                    <option>Scaffold Dismantle</option>
+                    <option>Scaffold Modification</option>
+                    <option>Scaffold Rental</option>
+                    <option>Scaffold Inspection</option>
+                    <option>Emergency Service</option>
+                  </select>
+                </label>
+                <label>Service Purpose <b>*</b>
+                  <select name="servicePurpose" required>
+                    <option value="">Select purpose</option>
+                    <option>Painting</option>
+                    <option>Stucco</option>
+                    <option>Roofing</option>
+                    <option>Window Work</option>
+                    <option>Waterproofing</option>
+                    <option>General Access</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label>Building Height (approx.) <b>*</b><input name="buildingHeight" type="number" min="0" placeholder="Enter height" required /></label>
+                <label>Scaffold Length (approx.) <b>*</b><input name="scaffoldLength" type="number" min="0" placeholder="Enter length" required /></label>
+                <label>Number of Levels <b>*</b>
+                  <select name="numberOfLevels" required>
+                    <option value="">Select levels</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option><option>Not sure</option>
+                  </select>
+                </label>
+                <div class="radio-group field-like">
+                  <span>Work Area Location <b>*</b></span>
+                  <label><input type="radio" name="workAreaLocation" value="Exterior" checked /> Exterior</label>
+                  <label><input type="radio" name="workAreaLocation" value="Interior" /> Interior</label>
+                  <label><input type="radio" name="workAreaLocation" value="Both" /> Both</label>
+                </div>
+                <label>Scaffold Type (if known)
+                  <select name="scaffoldType">
+                    <option value="">Select scaffold type</option>
+                    <option>Frame Scaffold</option>
+                    <option>System Scaffold</option>
+                    <option>Rolling Scaffold</option>
+                    <option>Stair Tower</option>
+                    <option>Not sure</option>
+                  </select>
+                </label>
+                <label>Special Requirements<textarea name="specialRequirements" rows="3" placeholder="Any special requirements or specifications"></textarea></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="card card-4">
+              <legend><span class="form-icon access-icon"></span><span class="number">4.</span> Access & Site Conditions</legend>
+              <div class="two-col">
+                <label>Site Access <b>*</b>
+                  <select name="siteAccess" required>
+                    <option value="">Select access type</option>
+                    <option>Street Access</option>
+                    <option>Driveway Access</option>
+                    <option>Alley Access</option>
+                    <option>Limited Access</option>
+                    <option>Requires Review</option>
+                  </select>
+                </label>
+                <div class="radio-group field-like">
+                  <span>Parking Available <b>*</b></span>
+                  <label><input type="radio" name="parkingAvailable" value="Yes" required /> Yes</label>
+                  <label><input type="radio" name="parkingAvailable" value="No" /> No</label>
+                </div>
+                <label>Access Width (approx.)<input name="accessWidth" type="number" min="0" placeholder="Enter width" /></label>
+                <label>Ground Surface Type
+                  <select name="groundSurface">
+                    <option value="">Select surface type</option>
+                    <option>Concrete</option>
+                    <option>Asphalt</option>
+                    <option>Dirt</option>
+                    <option>Grass / Landscaping</option>
+                    <option>Sloped Ground</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label>Obstacles or Restrictions<textarea name="obstacles" rows="3" placeholder="Describe any obstacles, overhangs, power lines, etc."></textarea></label>
+                <label class="checkbox-field">Site Photos Attached (optional)
+                  <span><input type="checkbox" name="sitePhotosAttached" value="Yes" /> Yes, I will upload photos below</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="card card-5">
+              <legend><span class="form-icon schedule-icon"></span><span class="number">5.</span> Schedule</legend>
+              <div class="two-col">
+                <label>Requested Start Date <b>*</b><input name="startDate" type="date" required /></label>
+                <label>Requested End Date (if known)<input name="endDate" type="date" /></label>
+              </div>
+              <div class="radio-stack">
+                <span>Urgency <b>*</b></span>
+                <label><input type="radio" name="urgency" value="Standard (10+ business days)" checked /> Standard (10+ business days)</label>
+                <label><input type="radio" name="urgency" value="Expedited (5–10 business days)" /> Expedited (5–10 business days)</label>
+                <label><input type="radio" name="urgency" value="Urgent (within 5 business days)" /> Urgent (within 5 business days)</label>
+              </div>
+              <label>Work Schedule
+                <select name="workSchedule">
+                  <option value="">Select work schedule</option>
+                  <option>Weekdays</option>
+                  <option>Weekends</option>
+                  <option>After hours</option>
+                  <option>Flexible</option>
+                </select>
+              </label>
+            </fieldset>
+
+            <fieldset class="card card-6 upload-card">
+              <legend><span class="form-icon upload-icon"></span><span class="number">6.</span> File Upload / Attachments</legend>
+              <p class="hint">Upload Plans, Drawings, Photos, or Documents</p>
+              <label class="drop-zone" id="dropZone">
+                <input id="fileInput" name="files" type="file" accept="image/*,.pdf,.dwg,.doc,.docx,.xls,.xlsx" multiple />
+                <span class="cloud">☁</span>
+                <strong>Drag and drop files here</strong>
+                <em>or click to browse</em>
+                <small>PDF, DWG, JPG, PNG (Max 25MB per file)</small>
+              </label>
+              <p class="accepted">Accepted file types: PDF, DWG, JPG, PNG | Max file size: 25MB each</p>
+              <ul id="fileList" class="file-list"></ul>
+            </fieldset>
+
+            <fieldset class="card notes-card">
+              <legend><span class="form-icon notes-icon"></span><span class="number">7.</span> Additional Notes</legend>
+              <p>Additional information that will help us better understand your project.</p>
+              <textarea name="additionalNotes" rows="2" placeholder="Enter any additional notes or information..."></textarea>
+            </fieldset>
+          </div>
+
+          <div class="agreement-bar">
+            <label class="agreement">
+              <input name="agreement" type="checkbox" required />
+              <span>I acknowledge that the information provided is accurate to the best of my knowledge. I understand that this is a request for information only and not a binding contract.<br><strong>Final pricing and project timelines will be determined after a site review and evaluation.</strong></span>
+            </label>
+            <div class="submit-actions">
+              <a class="site-visit-btn" href="tel:8557264387"><span>▣</span> Schedule Site Visit</a>
+              <button class="submit-btn" type="submit"><span>➤</span> Submit Request</button>
+              <small>🔒 Your information is secure and will not be shared.</small>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-brand">
+        <img src="/assets/norcal-spartan-logo-cropped.png" alt="Nor-Cal Spartan Scaffold logo" />
+        <p>Built Strong. Built Safe. Built Spartan.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>☎ (855) 726-4387</p>
+        <p>✉ info@norcalspartanscaffold.com</p>
+        <p>📍 123 Industrial Way<br />Dallas, TX 75207</p>
+      </div>
+      <div class="footer-column services-column">
+        <h3>Services</h3>
+        <div class="service-list">
+          <p>› Scaffold Erection</p>
+          <p>› Dismantle Services</p>
+          <p>› Scaffold Rental</p>
+          <p>› Inspections</p>
+          <p>› Scaffold Modification</p>
+          <p>› Project Support</p>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p>About Us</p>
+        <p>Safety</p>
+        <p>Careers</p>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="socials">
+          <span>in</span><span>f</span><span>◎</span><span>▶</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>
